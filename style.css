@@ -1,0 +1,122 @@
+.maincontainer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-left: 5em;
+}
+.box{
+    margin-top: 200px;
+    width: 250px;
+    height: 250px;
+    /* border: 1px solid black; */
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: rgb(180, 219, 193);
+    opacity: 0;
+    animation-delay: 2s;
+    animation: fadeIn 5s;
+    animation-fill-mode: forwards;
+   
+}
+.button {
+    margin-left: 50%;
+    margin-top: 15%;
+}
+img{
+    width: 100%;
+    margin: 0;
+    margin-top: 15%;
+}
+#img4{
+    margin-top: 10%;
+}
+#img5{
+    margin-top: 10%;
+}
+.para{
+    position: relative;
+    margin:100px;
+    color: bisque;
+}
+.box:hover{
+    background-color: rgb(249, 226, 157);
+    transform: scale(1.1);
+}
+.box:hover #p1{
+    color: black;
+    opacity: 100%;
+}
+.box:hover .para{
+    display: block;
+}
+.para{
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+    top: 100px;
+    display: none;
+}
+/* the pictures' sizes are influencing the positions of the headline, how to deal with the relative position difference? */
+#para4{
+    margin-top: -60px;
+}
+#para2{
+    margin-top: 5px;
+}
+#para5{
+    margin-top: -25px;
+}
+.display{
+    margin-top: 10em;
+    width: 100vw;
+    height: 50vh;
+    /* display: table-cell; */
+    /* vertical-align: middle; */
+    /* background-color: black; */
+}
+.fishImage{
+    /* align-content: center; */
+    margin-left: 30%;
+    width: 800px;
+    max-width: 50%;
+    max-height: 50%;
+    height: auto;
+    margin-top: 50px;
+}
+.fishDescription{
+    text-align: center;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+.fishTitle{
+    text-align: center;
+}
+.header{
+    margin-left: 5vw;
+    margin-top: 3em;
+    width: 500px;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1300px) {
+    .maincontainer{
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 800px) {
+    .maincontainer{
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+}

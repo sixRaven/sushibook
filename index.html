@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    
+        <img src="./assets/header.PNG" class="header">
+
+    <div class="maincontainer" id="maincontainer">
+        <div class="box" id="box1" onclick="maguro()">
+            <img src="./assets/1-maguroakami.png">
+            <img src="./assets/1-para.PNG" class="para">
+        </div>
+        <div class="box" id="box2" onclick="sake()">
+            <img src="./assets/2-salmon.png">
+             <img src="./assets/2-para.PNG" class="para" id="para2">
+        </div>
+        <div class="box" id="box3" onclick="buri()">
+            <img src="./assets/3-buri.png">
+             <img src="./assets/3-para.PNG" class="para">
+        </div>
+        <div class="box" id="box4" onclick="tai()">
+            <img id="img4" src="./assets/4-tai.png">
+             <img src="./assets/4-para.PNG" id="para4" class="para">
+        </div>
+        <div class="box" id="box5" onclick="fugu()">
+            <img id="img5" src="./assets/5-fugu.png">
+             <img src="./assets/5-para.PNG" class="para" id="para5">
+        </div>
+    </div>
+    <div class="display">
+
+    </div>
+</body>
+<script>
+$(".box").click(function(){
+        // var h=$(window).scrollTop(); //获取当前滚动条距离顶部的位置
+        h = $(document).height()-$(window).height();
+ $("html,body").animate({ scrollTop: h+200 }, 800);//点击按钮向下移动800px，时间为800毫秒
+});
+$(function(){
+    $(".header").fadeIn("slow");
+
+});
+</script>
+</html>
